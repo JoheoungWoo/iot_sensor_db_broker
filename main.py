@@ -9,4 +9,4 @@ def startup():
 
 @app.get("/")
 def health():
-    return {"status": "ok"}
+    return {"status": "사랑"}
