@@ -1,0 +1,87 @@
+################################
+# OS / Editor
+################################
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+################################
+# Python (FastAPI / Railway)
+################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+.env
+.env.*
+!.env.example
+
+.venv/
+venv/
+ENV/
+
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+
+################################
+# FastAPI / Uvicorn
+################################
+*.log
+uvicorn.log
+
+################################
+# Node / React (Vercel)
+################################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+dist/
+build/
+.out/
+
+.env
+.env.*
+!.env.example
+
+################################
+# Vercel
+################################
+.vercel
+
+################################
+# Supabase
+################################
+.supabase/
+supabase/.env
+supabase/.branches
+supabase/.temp
+
+################################
+# MQTT / IoT / Local test
+################################
+*.pem
+*.crt
+*.key
+
+################################
+# Docker
+################################
+docker-compose.override.yml
+*.env.docker
+
+################################
+# Misc
+################################
+coverage/
+.cache/
+.tmp/
+temp/
