@@ -48,7 +48,7 @@ def start_dummy_publisher():
     pub.tls_set()
     pub.connect(BROKER, PORT)
 
-    while True:
+    for i in range(10):  # 🔥 10개만 전송
         data = {
             "temperature": round(random.uniform(20, 30), 2),
             "humidity": round(random.uniform(40, 60), 2),
@@ -59,9 +59,12 @@ def start_dummy_publisher():
 
         topic = "sensor/dummy01/data"
         pub.publish(topic, json.dumps(data))
-        print("🧪 Dummy published:", data)
+        print(f"🧪 Dummy published ({i+1}/10):", data)
 
         time.sleep(1)
+
+    pub.disconnect()
+    print("✅ Dummy publish 완료 (10개)")
 
 # -----------------------
 # START MQTT
